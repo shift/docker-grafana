@@ -13,4 +13,5 @@ RUN apt-get update \
 
 EXPOSE 3000
 
+WORKDIR /usr/share/grafana
 CMD ["/usr/sbin/grafana-server", "--pidfile=/var/run/grafana-server.pid", "--config=/etc/grafana/grafana.ini", "cfg:default.paths.data=/var/lib/grafana", "cfg:default.paths.logs=/var/log/grafana"]
