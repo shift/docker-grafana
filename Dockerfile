@@ -5,10 +5,10 @@ MAINTAINER Vincent Palmer <shift@someone.section.me>
 WORKDIR /tmp
 RUN apt-get update \
     && apt-get install curl --yes \
-    && curl -L -O https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.2_amd64.deb \
+    && curl -L -O https://grafanarel.s3.amazonaws.com/builds/grafana_2.5.0_amd64.deb \
     && apt-get install -y adduser libfontconfig \
-    && dpkg -i grafana_2.1.2_amd64.deb \
-    && rm grafana_2.1.2_amd64.deb \
+    && dpkg -i grafana_2.5.0_amd64.deb \
+    && rm grafana_2.5.0_amd64.deb \
     && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 3000
